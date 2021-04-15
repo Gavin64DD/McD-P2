@@ -80,12 +80,9 @@ window.addEventListener('load', function() {
 }, false);
 
 function GalleryImage() {
-	//1. location where photo was taken
-  var location;
-	//2. description of photo
-  var description;
-	//3. the date when the photo was taken
-  var date;
-	//4. either a String (src URL) or an an HTMLImageObject (bitmap of the photo. https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement)
+	var location;
+	var description;
+	var date;
   var img;
+  var temporary;
 }
