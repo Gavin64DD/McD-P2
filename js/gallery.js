@@ -97,6 +97,10 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 }
 
 $(document).ready( function() {
+    if(mUrl == undefined)
+  {
+    	mUrl = 'images.json';
+  }
   fetchJSON();
 	// This initially hides the photos' metadata information
 	// $('.details').eq(0).hide();
@@ -110,7 +114,7 @@ window.addEventListener('load', function() {
 }, false);
 
 function iterateJSON(mJson) {
-  for(x = 0; x < mJson.length; x++)
+  for(x = 0; x < mJson.images.length; x++)
   {
     mImages[x] = new GalleryImage();
     mImages[x].location = mJson.images[x].imgLocation;
