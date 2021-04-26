@@ -79,7 +79,7 @@ function fetchJSON() {
   mRequest.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
          mJson = JSON.parse(mRequest.responseText);
-         iterateJSON();
+         iterateJSON(mJson);
       }
   };
   mRequest.open("GET", mUrl, true);
@@ -109,7 +109,7 @@ window.addEventListener('load', function() {
 
 }, false);
 
-function iterateJSON() {
+function iterateJSON(mJson) {
   for(x = 0; x < mJson.images.length; x++)
   {
     mImages[x] = new GalleryImage();
