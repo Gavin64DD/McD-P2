@@ -79,12 +79,11 @@ function fetchJSON() {
   mRequest.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
          mJson = JSON.parse(mRequest.responseText);
+         iterateJSON();
       }
   };
   mRequest.open("GET", mUrl, true);
   mRequest.send();
-
-  iterateJSON(mJson);
 }
 
 
