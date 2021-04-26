@@ -84,7 +84,7 @@ function fetchJSON() {
   mRequest.open("GET", mUrl, true);
   mRequest.send();
 
-  iterateJSON();
+  iterateJSON(mJson);
 }
 
 
@@ -110,7 +110,7 @@ window.addEventListener('load', function() {
 
 }, false);
 
-function iterateJSON() {
+function iterateJSON(mJson) {
   for(x = 0; x < mJson.length; x++)
   {
     mImages[x] = new GalleryImage();
