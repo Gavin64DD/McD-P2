@@ -73,7 +73,7 @@ var mJson;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = 'images.json';
+var mUrl = '../images.json';
 
 function fetchJSON() {
   mRequest.onreadystatechange = function() {
@@ -97,10 +97,6 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 }
 
 $(document).ready( function() {
-    if(mUrl == undefined)
-  {
-    	mUrl = 'images.json';
-  }
   fetchJSON();
 	// This initially hides the photos' metadata information
 	// $('.details').eq(0).hide();
